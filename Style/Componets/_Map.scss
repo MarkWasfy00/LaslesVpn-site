@@ -1,0 +1,33 @@
+.map{
+    display: flex;
+    flex-direction: column;
+    gap: 3rem;
+    @include media(tablet){
+        text-align: center;
+    }
+
+    &-content{
+        display: flex;
+        flex-direction: column;
+        gap: 4rem;
+        .sponsers{
+            display: flex;
+            align-items: center;
+            justify-content: space-evenly;
+            gap: 1rem;
+            .sponser{
+                width: 10rem;
+                
+                img{
+                    transition: 1s;
+                    cursor: pointer;
+                    height: 3rem;
+                    filter: grayscale(100%);
+                    &:hover{
+                        filter: grayscale(0);
+                    }
+                }
+            }
+        }
+    }
+}

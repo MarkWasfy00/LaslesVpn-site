@@ -1,0 +1,62 @@
+.statics{
+
+
+    &-heading{
+        background-color: $white;
+        border-radius: 1rem;
+        padding: 2rem 1rem;
+        display: flex;
+        flex-direction: column;
+        gap: 5rem;
+        @include media(tablet){
+            flex-direction: row;
+            justify-content: space-evenly;
+            padding: 4rem;
+            min-height: 20rem;
+        }
+        .block{
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            gap: 2rem;
+            
+    
+            &:not(:last-child){
+                @include media(tablet){
+                    border-bottom: none;
+                    border-right: 1px $border solid;
+                    padding-bottom: 0;
+                    padding-right: 5rem;
+                }
+                border-bottom: 1px $border solid;
+                padding-bottom: 2rem;
+            }
+            .icon{
+                background-color: $trans-red;
+                border-radius: 50%;
+                width: 5rem;
+                height: 5rem;
+                display: flex;
+                justify-content: center;
+                align-items: center;
+                
+                .bx{
+                    font-size: 2rem;
+                    color: $red;
+                }
+            }
+
+            .numbers{
+                display: flex;
+                flex-direction: column;
+                gap: .5rem;
+                .paragraph-xl{
+                    width: 10rem;
+                    @include media(tablet){
+                        width: auto;
+                    }
+                }
+            }
+        }
+    }
+}
